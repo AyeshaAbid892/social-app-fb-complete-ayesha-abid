@@ -1,0 +1,153 @@
+<svg viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', 'Trebuchet MS', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131b3f"/>
+      <stop offset="55%" stop-color="#0b1230"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+
+    <radialGradient id="fGoldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c451" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f5c451" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="fCyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="fGoldText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="50%" stop-color="#f5c451"/>
+      <stop offset="100%" stop-color="#e6ac2c"/>
+    </linearGradient>
+
+    <linearGradient id="fCardStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f5c451" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <clipPath id="fRounded">
+      <rect x="0" y="0" width="1200" height="260" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#fRounded)">
+    <!-- Base background -->
+    <rect width="1200" height="260" fill="url(#fbg)"/>
+
+    <!-- Ambient glows -->
+    <circle cx="120" cy="220" r="200" fill="url(#fGoldGlow)">
+      <animate attributeName="cx" values="120;190;120" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1080" cy="40" r="220" fill="url(#fCyanGlow)">
+      <animate attributeName="cx" values="1080;1000;1080" dur="9s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Top hairline -->
+    <rect x="0" y="0" width="1200" height="2" fill="url(#fCardStroke)" opacity="0.5"/>
+
+    <!-- Subtle grid dots -->
+    <g fill="#ffffff" opacity="0.05">
+      <circle cx="1100" cy="30" r="1.6"/><circle cx="1130" cy="30" r="1.6"/><circle cx="1160" cy="30" r="1.6"/>
+      <circle cx="1100" cy="58" r="1.6"/><circle cx="1130" cy="58" r="1.6"/><circle cx="1160" cy="58" r="1.6"/>
+      <circle cx="1100" cy="86" r="1.6"/><circle cx="1130" cy="86" r="1.6"/><circle cx="1160" cy="86" r="1.6"/>
+    </g>
+
+    <!-- Small connecting network motif -->
+    <g stroke="url(#fCardStroke)" stroke-width="1.2" opacity="0.5">
+      <line x1="60" y1="70" x2="130" y2="50">
+        <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
+      </line>
+      <line x1="130" y1="50" x2="110" y2="105">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite"/>
+      </line>
+    </g>
+    <g>
+      <circle cx="60" cy="70" r="3" fill="#22d3ee">
+        <animate attributeName="r" values="2.5;4.5;2.5" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="130" cy="50" r="2.5" fill="#f5c451">
+        <animate attributeName="r" values="2;4;2" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="110" cy="105" r="2.5" fill="#22d3ee">
+        <animate attributeName="r" values="2;3.8;2" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Left accent rule + Logo -->
+    <rect x="70" y="42" width="5" height="0" fill="url(#fGoldText)">
+      <animate attributeName="height" values="0;38" dur="0.8s" fill="freeze" begin="0.1s"/>
+    </rect>
+    <text x="95" y="72" font-size="30" font-weight="800" fill="url(#fGoldText)" letter-spacing="0.5">
+      SocialApp
+    </text>
+    <text x="95" y="98" font-size="14" fill="#8fa2d6" opacity="0.8">
+      Real-time chat, friends &amp; AI &#8212; all in the browser.
+    </text>
+
+    <!-- Link columns -->
+    <g font-size="14" fill="#c9d3f0">
+      <text x="420" y="48" font-size="13" font-weight="700" fill="#7ee7fb" letter-spacing="0.5">PRODUCT</text>
+      <text x="420" y="76" opacity="0.85">Features</text>
+      <text x="420" y="100" opacity="0.85">Chat</text>
+      <text x="420" y="124" opacity="0.85">AI Assistant</text>
+
+      <text x="620" y="48" font-size="13" font-weight="700" fill="#f8d878" letter-spacing="0.5">COMPANY</text>
+      <text x="620" y="76" opacity="0.85">About</text>
+      <text x="620" y="100" opacity="0.85">Blog</text>
+      <text x="620" y="124" opacity="0.85">Careers</text>
+
+      <text x="820" y="48" font-size="13" font-weight="700" fill="#7ee7fb" letter-spacing="0.5">RESOURCES</text>
+      <text x="820" y="76" opacity="0.85">Docs</text>
+      <text x="820" y="100" opacity="0.85">Support</text>
+      <text x="820" y="124" opacity="0.85">Community</text>
+    </g>
+
+    <!-- Social icon chips -->
+    <g transform="translate(1010,55)">
+      <circle cx="0" cy="0" r="18" fill="#ffffff" fill-opacity="0.05" stroke="url(#fCardStroke)" stroke-width="1"/>
+      <path d="M-6,-6 L6,6 M6,-6 L-6,6" stroke="#7ee7fb" stroke-width="0" />
+      <text x="0" y="5" text-anchor="middle" font-size="14" fill="#7ee7fb">X</text>
+    </g>
+    <g transform="translate(1058,55)">
+      <circle cx="0" cy="0" r="18" fill="#ffffff" fill-opacity="0.05" stroke="url(#fCardStroke)" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" font-size="13" fill="#f8d878">GH</text>
+    </g>
+    <g transform="translate(1106,55)">
+      <circle cx="0" cy="0" r="18" fill="#ffffff" fill-opacity="0.05" stroke="url(#fCardStroke)" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" font-size="13" fill="#7ee7fb">in</text>
+    </g>
+
+    <!-- Chat bubble motif echo -->
+    <g transform="translate(1000,130)" opacity="0.85">
+      <path d="M0 10 Q0 0 10 0 H110 Q120 0 120 10 V32 Q120 42 110 42 H26 L10 54 V42 H10 Q0 42 0 32 Z"
+            fill="#ffffff" fill-opacity="0.04" stroke="url(#fCardStroke)" stroke-width="1"/>
+      <circle cx="20" cy="21" r="3" fill="#22d3ee">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="32" cy="21" r="3" fill="#22d3ee">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" begin="0.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="44" cy="21" r="3" fill="#22d3ee">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" begin="0.4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Divider -->
+    <rect x="70" y="180" width="1060" height="1" fill="url(#fCardStroke)" opacity="0.35"/>
+
+    <!-- Bottom bar -->
+    <text x="70" y="215" font-size="13" fill="#8fa2d6" opacity="0.75">
+      &#169; 2026 SocialApp. All rights reserved.
+    </text>
+    <g font-size="13" fill="#8fa2d6" opacity="0.75">
+      <text x="960" y="215">Privacy</text>
+      <text x="1035" y="215">Terms</text>
+      <text x="1105" y="215">Contact</text>
+    </g>
+
+    <!-- Bottom hairline -->
+    <rect x="0" y="258" width="1200" height="2" fill="url(#fCardStroke)" opacity="0.5"/>
+  </g>
+</svg>
