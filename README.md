@@ -49,6 +49,8 @@
 > ⚠️ **Deploying your own copy?** The AI features (Messenger suggestions, auto-reply, comment suggestions, post/bio assistants) only work once a `VITE_OPENAI_API_KEY` is set in your environment variables. See [🔐 Security & API Key Setup](#-security--api-key-setup) before you deploy.
 
 ---
+<img width="1401" height="718" alt="image" src="https://github.com/user-attachments/assets/3d3e90f3-27ca-4a0d-923d-2ef59e46da77" />
+
 ## 📑 Table of Contents
 
 <table>
@@ -92,6 +94,7 @@
 </table>
 
 ---
+<img width="1403" height="684" alt="image" src="https://github.com/user-attachments/assets/fc688d07-0c40-4800-94ca-c9f92e4e60a3" />
 
 ---
 
@@ -125,6 +128,8 @@
 | `React.lazy` + `Suspense` for code-splitting | ✅ | Every route in `App.jsx` is lazy-loaded inside one `Suspense` boundary |
 | No Bootstrap / MUI / Ant / jQuery / backend / external DB | ✅ | Verified — none appear in `package.json` or the source |
 
+<img width="1403" height="713" alt="image" src="https://github.com/user-attachments/assets/97532a48-723b-494b-8618-24af61f2d948" />
+
 ### Feature Areas
 | Area | Marks | Status |
 |---|---|---|
@@ -143,6 +148,7 @@
 > Everything is functionally complete. The only remaining manual step is pasting your deployed link and screenshots into this README before submission (both sections below are ready — just fill in the blanks).
 
 ---
+<img width="1393" height="707" alt="image" src="https://github.com/user-attachments/assets/72dbb560-65b1-4f72-91fc-aa38cb1d10e8" />
 
 ## 3. Tech Stack
 
@@ -171,6 +177,8 @@
 >- Because there is no backend, **no environment variables are required to run the core app** — it works out of the box.
 >- To enable the **AI features** on the deployed link, add `VITE_OPENAI_API_KEY` as an environment variable in your hosting provider's dashboard (Vercel → Project → Settings → Environment >Variables), then redeploy. Without it, every other feature (auth, posts, friends, chat) still works perfectly — only the AI panels show a friendly "AI not configured" message.
 
+<img width="1401" height="696" alt="image" src="https://github.com/user-attachments/assets/e00e7b64-e391-46e0-b564-847f39040771" />
+
 ---
 
 ## 5. Screenshots
@@ -196,6 +204,7 @@ cd social-app
 npm install
 npm run dev
 ```
+<img width="1404" height="684" alt="image" src="https://github.com/user-attachments/assets/456d6d2b-867e-46d4-a6a8-970359dd2ce5" />
 
 >The app opens at `http://localhost:5173`. It runs fully offline once dependencies are installed — no API keys required for the core platform.
 
@@ -210,6 +219,7 @@ npm run lint       # run oxlint across src/
 ---
 
 ## 7. Architecture & Folder Structure
+<img width="1402" height="712" alt="image" src="https://github.com/user-attachments/assets/bae19d61-e7f5-49ab-ad9b-01217536ba99" />
 
 ```
 social-app/
@@ -264,6 +274,7 @@ social-app/
 ```
 
 >**Design principle:** every component that needs data calls a **hook** (`usePosts`, `useAuth`, `useChat`, `useAI`…), never `localStorage` or the OpenAI SDK directly. Every hook calls **`storage.js`** (or, for AI, **`useAI.js` → `lib/openai.js`**) and nothing else does. This one-way dependency chain — `component → hook → storage.js / lib/openai.js` — is what keeps the codebase testable, and makes it trivial to later swap `localStorage` for a real API, since only `storage.js` would need to change.
+<img width="1403" height="716" alt="image" src="https://github.com/user-attachments/assets/2a1dd1f5-ff74-42a7-96b8-7d5df8fb0404" />
 
 ---
 
@@ -301,6 +312,7 @@ social-app/
 ```
 
 >Every feature area adds its own namespaced key the same way — **all read/written exclusively through `storage.js`**:
+<img width="1404" height="677" alt="image" src="https://github.com/user-attachments/assets/a794fbf0-7f55-4b2a-88c1-4da803f4d53c" />
 
 | Feature | Keys |
 |---|---|
@@ -335,6 +347,8 @@ social-app/
 | `*` | Public | NotFoundPage (404) |
 
 ---
+<img width="1403" height="716" alt="image" src="https://github.com/user-attachments/assets/2d06265f-7d90-4733-9acc-611b98602962" />
+
 
 ## 10. Authentication Flow, Step by Step
 
@@ -360,6 +374,8 @@ social-app/
 >- **Dashboard → Settings** — pre-filled profile form, live 150-char bio counter, avatar preview, writes through `updateCurrentUser()` so the navbar updates with zero reloads.
 
 ---
+ <img width="1405" height="712" alt="image" src="https://github.com/user-attachments/assets/2e454ff3-f8f7-4717-bae3-9187094d5f59" />
+
 
 ## 12. Reusable Component Library
 
@@ -390,6 +406,7 @@ social-app/
 | `useAI` | The **only** entry point to the OpenAI API — every AI-powered feature calls through here |
 
 ---
+<img width="1402" height="673" alt="image" src="https://github.com/user-attachments/assets/24a3be2d-409b-46f4-ba7d-288d86340302" />
 
 ## 14. Bonus Features
 
@@ -417,6 +434,9 @@ social-app/
 >- **Mobile-first responsive layout** — verified at `sm` (640px), `md` (768px), `lg` (1024px), `xl` (1280px) breakpoints; the navbar collapses gracefully down to ~320px-wide viewports.
 
 ---
+<img width="1404" height="717" alt="image" src="https://github.com/user-attachments/assets/f702e888-4858-4db0-ac5b-c851e4829b4b" />
+
+
 
 ## 16. Known Limitations
 
@@ -444,6 +464,9 @@ social-app/
 >- **AI Integration (OpenAI)** — a writing assistant in Create/Edit Post, a comment suggester on Post Detail, a bio optimizer in Profile Settings, and two chat AI modes (reply suggestions + optional auto-reply) — all routed through one hook, `useAI.js`.
 
 ---
+
+<img width="1402" height="701" alt="image" src="https://github.com/user-attachments/assets/87d5800b-b18f-4d42-8619-00f2cd245fcd" />
+
 
 ## 19. AI Features — How the OpenAI API Is Used
 
@@ -482,6 +505,7 @@ useAI.js  ──►  lib/openai.js  ──►  OpenAI API (gpt-4o-mini)
 >- **Chat auto-reply** → shows a toast ("AI reply failed — please reply manually"), because here the user is actively relying on the AI to respond on their behalf, so silence would be misleading.
 
 >A dedicated `AIConfigError` class distinguishes "no API key configured" from a genuine network/rate-limit failure, so the UI can show "Add your API key in `.env`" instead of a generic error when that's actually the problem.
+<img width="1401" height="718" alt="image" src="https://github.com/user-attachments/assets/f5193555-13ab-4a1c-b156-fcd11564242e" />
 
 ### 19.4 Bonus: AI Chat Personality
 
@@ -511,6 +535,8 @@ User A sends a message
 >**Typing indicators & online status** avoid extra writes entirely: a timestamp is written once (on typing, or as a presence heartbeat), and every reader treats it as "active" only while `Date.now() - timestamp` is under a threshold — 3 seconds for typing, 5 minutes for online — checked via a local re-render tick (`useNowTick`), never by writing a matching "stopped" event.
 
 ---
+<img width="1400" height="668" alt="image" src="https://github.com/user-attachments/assets/42a91c62-a9ce-44e3-b287-874eafd62275" />
+
 
 ## 21. Setting Up the OpenAI API Key
 
@@ -543,6 +569,7 @@ User A sends a message
 >- **Voice/video calling** — real calling needs WebRTC plus a signaling server, which requires exactly the backend and WebSocket infrastructure the assignment rules out. A fake "Call" button that opens nothing would be worse than no button at all.
 >- **A real GIF picker** — needs a third-party API key (e.g. Giphy/Tenor) outside this project's scope.
 >- **Groups / Communities as live features** — the data model and grading rubric here are built entirely around one-to-one conversations; group chat is a meaningfully different data shape (participant lists, group-level read state) that isn't part of what's graded.
+<img width="1401" height="675" alt="image" src="https://github.com/user-attachments/assets/54ef1cc8-930b-4eeb-bbe7-23a029a262fa" />
 
 ---
 
