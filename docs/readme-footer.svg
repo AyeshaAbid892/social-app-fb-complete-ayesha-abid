@@ -1,0 +1,31 @@
+<svg viewBox="0 0 1200 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fbg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="150" fill="url(#fbg)"/>
+
+  <!-- gentle wave divider -->
+  <path d="M0 18 C 200 40, 400 0, 600 18 S 1000 40, 1200 18 L1200 0 L0 0 Z" fill="#0f2559" opacity="0.5"/>
+
+  <g transform="translate(64,42)">
+    <rect width="34" height="34" rx="9" fill="#ffffff"/>
+    <text x="17" y="24" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#1d4ed8" text-anchor="middle">S</text>
+    <text x="46" y="16" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#ffffff">SocialApp</text>
+    <text x="46" y="34" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#bfdbfe">Built for the MERN Stack + AI Engineering Bootcamp</text>
+  </g>
+
+  <g transform="translate(1136,58)" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#bfdbfe">
+    <text x="0" y="-8">React · Router · Tailwind · Context API · localStorage</text>
+    <text x="0" y="12">No backend — 100% client-side persistence</text>
+  </g>
+
+  <line x1="64" y1="108" x2="1136" y2="108" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="600" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#93c5fd" text-anchor="middle" opacity="0.85">
+    Made with React, Tailwind CSS &amp; a lot of localStorage.getItem()
+  </text>
+</svg>
